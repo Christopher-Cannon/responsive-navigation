@@ -1,0 +1,272 @@
+/* Set everything to use border-box model */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Set up various elements */
+a {
+  text-decoration:none;
+}
+
+li {
+  list-style-type:none;
+}
+
+input {
+  border:1px solid #aaa;
+  padding-top:7px;
+  padding-bottom:7px;
+}
+
+/* Some useful modular classes, btn may be limited in usefulness however */
+.btn {
+  background-color:#3498db;
+  border:0;
+  color:#fff;
+  cursor:pointer;
+  padding:8px 20px;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+}
+
+.text-left {
+  text-align:left;
+}
+
+.float-left {
+  float:left;
+}
+
+.text-center {
+  text-align:center;
+}
+
+/* The container that holds everything*/
+.main-container {
+  font-family:'Calibri', sans-serif;
+}
+
+/* Basic flex container, may produce strange results if nested */
+.flex-container {
+  display:flex;
+  flex-flow:row wrap;
+}
+/* General header classes, affects any screen size */
+.header {
+  background-color:#426a44;
+  color:#fff;
+  height:100px;
+}
+
+/* Containers for the logo and mobile nav button.
+   You may wish to split this into two classes later on if necessary */
+.header-img {
+  width:100px;
+}
+
+.header-title {
+  margin-top:7px;
+  text-align:center;
+}
+
+/* Affects both logo and mobile nav button */
+.header-img img {
+  height:100px;
+  width:100px;
+}
+
+/* General nav classes, affects any screen size */
+.nav {
+  width:100%;
+}
+
+.nav li a {
+  color:#fff;
+}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  /* Make the input and search button bigger on small and medium */
+  input {
+    padding-top:14px;
+    padding-bottom:14px;
+  }
+
+  .btn {
+    padding:15px 20px;
+  }
+
+  /* Similar to Foundation visibility classes */
+  .show-on-small {
+    display:initial;
+  }
+
+  /* Justify header containers on small and medium */
+  .header {
+    justify-content:space-between;
+  }
+
+  /* Nav for small and medium screens */
+  .nav li {
+    background-color:#994499;
+  }
+  /* Defines the colour of every second nav element */
+  .nav li:nth-child(2n) {
+    background-color:#aa55aa;
+  }
+
+  .nav-link, .nav-search {
+    width:100%;
+  }
+
+  .nav li a {
+    display:block;
+    height:30px;
+    padding-top:5px;
+    width:100%;
+  }
+
+  .nav li a:hover {
+    background-color:#cc66cc;
+  }
+
+  .nav li input {
+    width:80%;
+  }
+
+  .nav li button {
+    width:20%;
+  }
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  .show-on-small {
+    display:none;
+  }
+}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  /* Make the input and search button bigger on small and medium */
+  input {
+    padding-top:14px;
+    padding-bottom:14px;
+  }
+
+  .btn {
+    padding:15px 20px;
+  }
+
+  /* Similar to Foundation visibility classes */
+  .show-on-medium {
+    display:initial;
+  }
+
+  .hide-on-medium {
+    display:none;
+  }
+
+  /* Justify header containers on small and medium */
+  .header {
+    justify-content:space-between;
+  }
+
+  /* Nav for small and medium screens */
+  .nav li {
+    background-color:#994499;
+  }
+  /* Defines the colour of every second nav element */
+  .nav li:nth-child(2n) {
+    background-color:#aa55aa;
+  }
+
+  .nav-link, .nav-search {
+    width:100%;
+  }
+
+  .nav li a {
+    display:block;
+    height:30px;
+    padding-top:5px;
+    width:100%;
+  }
+
+  .nav li a:hover {
+    background-color:#cc66cc;
+  }
+
+  .nav li input {
+    width:80%;
+  }
+
+  .nav li button {
+    width:20%;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  /* Start containers on the left on large screens */
+  .header {
+    justify-content:flex-start;
+  }
+
+  /* Justify nav list elements on large */
+  .nav {
+    justify-content:space-around;
+  }
+
+  /* Push header title away from logo on large */
+  .header-title {
+    margin-left:30px;
+  }
+
+  /* Nav for large screens */
+  .nav li {
+    background-color:#994499;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .nav-link {
+    width:14%;
+  }
+
+  .nav-search {
+    width:30%;
+  }
+
+  .nav li a {
+    height:34px;
+    padding-top:7px;
+    width:100%;
+  }
+
+  .nav li a:hover {
+    background-color:#cc66cc;
+  }
+
+  .nav li form {
+    width:100%;
+  }
+
+  .nav li input {
+    width:80%;
+  }
+
+  .nav li button {
+    width:20%;
+  }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

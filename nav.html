@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Responsive navigation</title>
+
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+	</head>
+
+	<body>
+    <div class="main-container">
+      <header class="flex-container header">
+        <div class="header-img">
+          <a href="#">
+            <img src="img/death.jpg"/>
+          </a>
+        </div>
+
+        <div class="header-title">
+          <h1>Title</h1>
+        </div>
+
+        <div class="header-img show-on-small show-on-medium">
+          <a href="#" id="show-nav">
+            <img src="img/death.jpg"/>
+          </a>
+        </div>
+      </header>
+
+      <nav class="flex-container nav text-center" id="mobile-nav">
+        <li class="nav-link"><a href="#">Home</a></li>
+        <li class="nav-link"><a href="#">About</a></li>
+        <li class="nav-link"><a href="#">Portfolio</a></li>
+				<li class="nav-link"><a href="#">Blog</a></li>
+        <li class="nav-link"><a href="#">Contact</a></li>
+        <li class="nav-search">
+          <form class="text-left">
+            <input class="float-left" type="text" placeholder="Search..."/>
+            <button class="btn float-left">Go</button>
+          </form>
+        </li>
+      </nav>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function()
+      {
+				// Show or hide the nav on small and medium
+        $("#show-nav").click(function()
+        {
+          $("#mobile-nav").slideToggle(100);
+        });
+
+        // The only caveat with this is that it will hide the nav on mobile if
+        // the window is resized, though this is only visible on desktop
+        $(window).resize(function() {
+           // This will fire each time the window is resized:
+           if($(window).width() >= 1024) {
+               // If larger or equal
+               $('#mobile-nav').show();
+             } else {
+               // If smaller
+               $('#mobile-nav').hide();
+             }
+         }).resize(); // This will simulate a resize to trigger the initial run.
+      });
+    </script>
+  </body>
+</html>
