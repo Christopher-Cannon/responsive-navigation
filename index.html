@@ -32,11 +32,18 @@
 
 			<nav>
 	      <ul class="flex-container nav text-center" id="mobile-nav">
-	        <li class="nav-link"><a href="#">Home</a></li>
-	        <li class="nav-link"><a href="#">About</a></li>
-	        <li class="nav-link"><a href="#">Portfolio</a></li>
-					<li class="nav-link"><a href="#">Blog</a></li>
-	        <li class="nav-link"><a href="#">Contact</a></li>
+	        <li class="nav-link"><a href="index.html">Home</a></li>
+	        <li class="nav-link"><a href="index.html">About</a></li>
+	        <li class="nav-link dropdown">
+						<a href="#">Portfolio</a>
+
+						<ul>
+							<li><a href="index.html">Project one</a></li>
+			        <li><a href="index.html">Project two</a></li>
+						</ul>
+					</li>
+					<li class="nav-link"><a href="index.html">Blog</a></li>
+	        <li class="nav-link"><a href="index.html">Contact</a></li>
 	        <li class="nav-search">
 	          <form class="text-left">
 	            <input class="float-left" type="text" placeholder="Search..."/>
@@ -51,24 +58,38 @@
     <script>
       $(document).ready(function()
       {
-				// Show or hide the nav on small and medium
-        $("#show-nav").click(function()
-        {
-          $("#mobile-nav").slideToggle(100);
-        });
+				// The only caveat with this is that it will hide the nav on mobile if
+				// the window is resized, though this is only visible on desktop
+				$(window).resize(function() {
+					// This will fire each time the window is resized:
+					if($(window).width() >= 1024) {
+					// If larger or equal
+						$('#mobile-nav').show();
+						$('.dropdown').find("ul").removeAttr("style");
+					} else {
+					// If smaller
+						$('#mobile-nav').hide();
+					}
+				}).resize(); // This will simulate a resize to trigger the initial run.
 
-        // The only caveat with this is that it will hide the nav on mobile if
-        // the window is resized, though this is only visible on desktop
-        $(window).resize(function() {
-           // This will fire each time the window is resized:
-           if($(window).width() >= 1024) {
-               // If larger or equal
-               $('#mobile-nav').show();
-             } else {
-               // If smaller
-               $('#mobile-nav').hide();
-             }
-         }).resize(); // This will simulate a resize to trigger the initial run.
+				// Show or hide the nav on small and medium
+				$("#show-nav").click(function()
+				{
+					$("#mobile-nav").slideToggle(100);
+				});
+
+				// Toggle dropdown on small/medium screens only
+				$('.dropdown').click(function(event){
+					if($(window).width() < 1024)
+					{
+						event.stopPropagation();
+						$(this).find("ul").toggle();
+					}
+					else
+					{
+						$(this).find("ul").removeAttr("style");
+					}
+				});
       });
     </script>
   </body>

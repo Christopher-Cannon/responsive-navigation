@@ -104,8 +104,12 @@ input {
 }
 
 .nav li a:hover {
-  background-color:#fff;
+  background-color:#3fb2fd;
   color:#111;
+}
+
+.dropdown ul {
+  display:none;
 }
 
 .search-btn {
@@ -134,13 +138,25 @@ input {
   }
 
   /* Nav for small and medium screens */
-  /* Defines the colour of every second nav element */
-  .nav li:nth-child(2n) {
-    background-color:#2b2b2b;
-  }
-
   .nav-link, .nav-search {
     width:100%;
+  }
+
+  .nav li:nth-child(2n) {
+    background-color:#333;
+  }
+
+  .dropdown ul {
+    border-left:2px solid white;
+    border-right:2px solid white;
+  }
+
+  .dropdown li:nth-child(2n) {
+    background-color:#111;
+  }
+
+  .dropdown li:nth-child(2n+1) {
+    background-color:#333;
   }
 
   .nav li a {
@@ -154,6 +170,11 @@ input {
 
   .nav li button {
     width:20%;
+  }
+
+  .dropdown ul li a {
+    height:36px;
+    padding-top:8px;
   }
 }
 /* Medium and up */
@@ -191,7 +212,20 @@ input {
   /* Nav for small and medium screens */
   /* Defines the colour of every second nav element */
   .nav li:nth-child(2n) {
-    background-color:#2b2b2b;
+    background-color:#333;
+  }
+
+  .dropdown ul {
+    border-left:2px solid white;
+    border-right:2px solid white;
+  }
+
+  .dropdown li:nth-child(2n) {
+    background-color:#111;
+  }
+
+  .dropdown li:nth-child(2n+1) {
+    background-color:#333;
   }
 
   .nav-link, .nav-search {
@@ -209,6 +243,11 @@ input {
 
   .nav li button {
     width:20%;
+  }
+
+  .dropdown ul li a {
+    height:36px;
+    padding-top:8px;
   }
 }
 
@@ -258,6 +297,13 @@ input {
 
   .nav li button {
     width:20%;
+  }
+
+  .dropdown:hover ul {
+    display:block;
+    position:absolute;
+    margin-top:120px;
+    width:14%;
   }
 }
 
