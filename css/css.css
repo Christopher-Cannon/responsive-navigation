@@ -302,10 +302,18 @@ input {
   .dropdown:hover ul {
     display:block;
     position:absolute;
-    margin-top:120px;
     width:14%;
   }
-}
+  /* Position the dropdown correctly in Firefox and Chrome */
+  _:-moz-tree-row(hover), .dropdown:hover ul {
+    margin-top:120px;
+  }
+
+  @supports (-webkit-appearance:none) {
+    .dropdown:hover ul {
+      margin-top:60px;
+    }
+  }
 
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
