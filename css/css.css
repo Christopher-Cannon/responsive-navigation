@@ -139,64 +139,9 @@ input {
 }
 /* Small only */
 @media screen and (max-width: 39.9375em) {
-  /* Make the input and search button bigger on small and medium */
-  input {
-    padding-top:14px;
-    padding-bottom:14px;
-  }
-
-  .btn {
-    padding:15px 20px;
-  }
-
   /* Similar to Foundation visibility classes */
   .show-on-small {
     display:initial;
-  }
-
-  /* Justify header containers on small and medium */
-  .header {
-    justify-content:space-between;
-  }
-
-  /* Nav for small and medium screens */
-  .nav-link, .nav-search {
-    width:100%;
-  }
-
-  .nav li:nth-child(2n) {
-    background-color:#333;
-  }
-
-  .dropdown ul {
-    border-left:2px solid white;
-    border-right:2px solid white;
-  }
-
-  .dropdown li:nth-child(2n) {
-    background-color:#111;
-  }
-
-  .dropdown li:nth-child(2n+1) {
-    background-color:#333;
-  }
-
-  .nav li a {
-    display:block;
-    width:100%;
-  }
-
-  .nav li input {
-    width:80%;
-  }
-
-  .nav li button {
-    width:20%;
-  }
-
-  .dropdown ul li a {
-    height:36px;
-    padding-top:8px;
   }
 
   .content {
@@ -212,10 +157,6 @@ input {
 }
 /* Medium and small only */
 @media screen and (max-width: 63.9375em) {
-
-}
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
   /* Make the input and search button bigger on small and medium */
   input {
     padding-top:14px;
@@ -226,21 +167,14 @@ input {
     padding:15px 20px;
   }
 
-  /* Similar to Foundation visibility classes */
-  .show-on-medium {
-    display:initial;
-  }
-
-  .hide-on-medium {
-    display:none;
-  }
-
   /* Justify header containers on small and medium */
   .header {
     justify-content:space-between;
   }
-
   /* Nav for small and medium screens */
+  .nav-link, .nav-search {
+    width:100%;
+  }
   /* Defines the colour of every second nav element */
   .nav li:nth-child(2n) {
     background-color:#333;
@@ -279,6 +213,17 @@ input {
   .dropdown ul li a {
     height:36px;
     padding-top:8px;
+  }
+}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  /* Similar to Foundation visibility classes */
+  .show-on-medium {
+    display:initial;
+  }
+
+  .hide-on-medium {
+    display:none;
   }
 
   .content {
