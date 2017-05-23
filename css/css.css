@@ -47,6 +47,10 @@ a:hover {
 .footer a, .footer p {
   color:#fff;
 }
+
+.footer a {
+  display:block;
+}
 /* Set up various elements */
 ul {
   margin:0;
@@ -158,6 +162,10 @@ input {
 .post-header {
   border-bottom:1px solid #ccc;
 }
+
+.footer {
+  background-color:#111;
+}
 /* Small only */
 @media screen and (max-width: 39.9375em) {
   /* Similar to Foundation visibility classes */
@@ -234,6 +242,24 @@ input {
   .dropdown ul li a {
     height:36px;
     padding-top:8px;
+  }
+
+  .footer {
+    flex-direction:column;
+    align-items:center;
+    padding-bottom:20px;
+  }
+
+  .footer a {
+    padding:5px 0;
+  }
+
+  .footer div a:first-of-type {
+    margin-top:5px;
+  }
+
+  .footer div:first-of-type {
+    border-bottom:1px solid #fff;
   }
 }
 /* Medium only */
@@ -324,8 +350,8 @@ input {
 
   .footer {
     align-items:center;
-    background-color:#0950b3;
     justify-content:space-around;
+    height:75px;
   }
 }
 
