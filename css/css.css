@@ -3,12 +3,20 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  height:100%;
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+body {
+  display:flex;
+  flex-direction:column;
+  font-family:'Calibri', sans-serif;
+  min-height:100%;
 }
 
 h1 {
@@ -20,7 +28,24 @@ h2 {
 }
 
 h3 {
+  font-size:1.8em;
+}
 
+p {
+  color:#111;
+}
+
+a {
+  color:#5544ee;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+.footer a, .footer p {
+  color:#fff;
 }
 /* Set up various elements */
 ul {
@@ -30,10 +55,6 @@ ul {
 
 li {
   list-style-type:none;
-}
-
-a {
-  text-decoration:none;
 }
 
 input {
@@ -75,7 +96,7 @@ input {
 
 /* The container that holds everything*/
 .main-container {
-  font-family:'Calibri', sans-serif;
+  flex:1;
 }
 
 /* Basic flex container, may produce strange results if nested */
@@ -299,6 +320,12 @@ input {
   .content {
     margin:auto;
     width:60%;
+  }
+
+  .footer {
+    align-items:center;
+    background-color:#0950b3;
+    justify-content:space-around;
   }
 }
 
