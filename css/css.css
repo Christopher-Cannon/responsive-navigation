@@ -11,6 +11,17 @@ html {
   box-sizing: inherit;
 }
 
+h1 {
+  font-size:2.6em;
+}
+
+h2 {
+  font-size:2.2em;
+}
+
+h3 {
+
+}
 /* Set up various elements */
 ul {
   margin:0;
@@ -54,6 +65,14 @@ input {
   text-align:center;
 }
 
+.lead {
+  font-size:1.2em;
+}
+
+.minor {
+  font-size:0.9em;
+}
+
 /* The container that holds everything*/
 .main-container {
   font-family:'Calibri', sans-serif;
@@ -78,7 +97,6 @@ input {
 }
 
 .header-title {
-  margin-top:7px;
   text-align:center;
 }
 
@@ -114,6 +132,10 @@ input {
 
 .search-btn {
   padding:11px 20px;
+}
+
+.post-header {
+  border-bottom:1px solid #ccc;
 }
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -176,12 +198,21 @@ input {
     height:36px;
     padding-top:8px;
   }
+
+  .content {
+    margin:auto;
+    width:98%;
+  }
 }
 /* Medium and up */
 @media screen and (min-width: 40em) {
   .show-on-small {
     display:none;
   }
+}
+/* Medium and small only */
+@media screen and (max-width: 63.9375em) {
+
 }
 /* Medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -249,6 +280,11 @@ input {
     height:36px;
     padding-top:8px;
   }
+
+  .content {
+    margin:auto;
+    width:90%;
+  }
 }
 
 /* Large and up */
@@ -314,6 +350,12 @@ input {
       margin-top:60px;
     }
   }
+
+  .content {
+    margin:auto;
+    width:60%;
+  }
+}
 
 /* Large only */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
