@@ -18,7 +18,7 @@ body {
   font-family:'Calibri', sans-serif;
   min-height:100%;
 }
-
+/* Set up heading sizes */
 h1 {
   font-size:2.6em;
 }
@@ -39,8 +39,8 @@ a {
   color:#5544ee;
   text-decoration:none;
 }
-
-a:hover {
+/* Underline links on hover only in content and footer */
+.content a:hover, .footer a:hover {
   text-decoration:underline;
 }
 
@@ -252,6 +252,7 @@ input {
 
   .footer a {
     padding:5px 0;
+    text-decoration:underline;
   }
 
   .footer div a:first-of-type {
@@ -260,6 +261,10 @@ input {
 
   .footer div:first-of-type {
     border-bottom:1px solid #fff;
+  }
+
+  .top-link {
+    font-size:1.4em;
   }
 }
 /* Medium only */
